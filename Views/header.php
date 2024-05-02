@@ -16,9 +16,6 @@
     <title>php - Hotel</title>
 
 </head>
-
-<body>
-    
-</body>
-
-</html>
+<div class="container">
+    <h1 class="text-center text-primary">Hotels to print</h1>
+</div>
