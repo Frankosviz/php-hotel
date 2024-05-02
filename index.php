@@ -17,6 +17,15 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
 
     // Includiamo i nostri componenti della cartella Views
 
+    if (!empty($_GET['choices']) || (isset($_GET['choices']) && $_GET['choices'] == 0)) {
+        $choices = $_GET['choices'];
+        $hotels = array_filter($hotels, function ($hotel) use ($choices) {
+          return $hotel['parking'] == $choices || $choices == "all";
+        });
+      } else {
+        $hotel = $hotels;
+      }
+
     include __DIR__ . "/Views/header.php";
     include __DIR__ ."/Views/main.php";
     include __DIR__ ."/Views/footer.php";

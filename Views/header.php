@@ -16,6 +16,21 @@
     <title>php - Hotel</title>
 
 </head>
-<div class="container">
-    <h1 class="text-center text-primary">Hotels to print</h1>
-</div>
+<body>
+    <header>
+        <div class="container  d-flex justify-content-between ">
+            <h1 class="text-center text-primary">
+                Hotels to Find
+            </h1>
+            <form action="index.php" method="GET">
+
+                <select class="form-control me-2" name="choices">
+                    <option value="all">All</option>
+                    <option value="0">With parking</option>
+                    <option value="1">Statistiche visibili</option>
+                </select>
+                <button type="submit" class="btn btn-outline-success">Search</button>
+            </form>
+        </div>
+
+    </header>
