@@ -1,7 +1,7 @@
 <?php
 $template = "";
 foreach ($hotels as $hotel) {
-    $template .= "<tr> <td>{$hotel['name']}</td> <td>{$hotel['description']}</td> <td>{$hotel['parking']}</td> <td>{$hotel['vote']}</td> <td>{$hotel['distance_to_center']}</td> </tr>";
+    $template .= "<tr> <td class='text-center fw-bold'>{$hotel['name']}</td> <td class='text-center'>{$hotel['description']}</td> <td class='text-center'>{$hotel['parking']}</td> <td class='text-center'>{$hotel['vote']}</td> <td class='text-center'>{$hotel['distance_to_center']}</td> </tr>";
 
 }
 
@@ -10,12 +10,12 @@ foreach ($hotels as $hotel) {
 
 <table class="table table-striped">
     <thead>
-        <tr>
-            <th scope="col">name</th>
-            <th scope="col">description</th>
-            <th scope="col">parking</th>
-            <th scope="col">vote</th>
-            <th scope="col">distance to center</th>
+        <tr class="text-center background-light">
+            <th class="text-primary fs-4" scope="col">Nome Hotel</th>
+            <th class="text-primary fs-4" scope="col">Descrizione</th>
+            <th class="text-primary fs-4" scope="col">Parcheggio</th>
+            <th class="text-primary fs-4" scope="col">Voto (da 1 a 5 stelle)</th>
+            <th class="text-primary fs-4" scope="col">Distanza dal centro (in km)</th>
         </tr>
     </thead>
     <tbody>
