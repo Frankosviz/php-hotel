@@ -20,21 +20,18 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="text-center text-primary">
-                Hotels to Find
+            <h1 class="text-center text-primary mb-5">
+                Book a hotel
             </h1>
 
-            <form action="index.php" method="GET" class="d-flex justify-content-between align-items-center" >
+            <form action="index.php" method="GET" class="d-flex justify-content-between align-items-center mb-3" >
                 <div>
                     <select class="form-control me-2" name="choices">
                         <option value="all">All</option>
                         <option value="0">With parking</option>
                         <option value="1">Without parking</option>
+                        <input class="form-control" name="stars" placeholder="Search 1 - 5 stars"></option>
                     </select>
-                </div>
-
-                <div>
-                    <input class="form-control" type="number" name="stars" placeholder="Search 1 - 5 stars"></option>
                 </div>
                 <div>
                     <button type="submit" class="btn btn-outline-success">Search</button>

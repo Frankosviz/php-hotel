@@ -26,6 +26,13 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
         $hotel = $hotels;
       }
 
+      if (!empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
+        $rating = $_GET['stars'];
+        $hotels = array_filter($hotels, function ($hotel) use ($rating) {
+          return $hotel['vote'] >= $rating || $rating == "all";
+        });
+      }
+
     include __DIR__ . "/Views/header.php";
     include __DIR__ ."/Views/main.php";
     include __DIR__ ."/Views/footer.php";
