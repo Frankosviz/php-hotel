@@ -20,7 +20,7 @@ include __DIR__ . "/Views/header.php";
   </div>
 
   <?php
-  include __DIR__ . "/Views/table.php";
+  include __DIR__ . "/Views/main.php";
   ?>
 </main>
 <?php

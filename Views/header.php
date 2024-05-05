@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/script.js" type="text/javascript" defer></script>
-    <title>Steam</title>
+    <title>php-hotel</title>
 
 </head>
 
@@ -21,14 +21,15 @@
     <header>
         <div class="container  d-flex justify-content-between align-items-center">
             <h1>
-                Data Steam
+                Book a Hotel
             </h1>
             <form action="index.php" method="GET" class="d-flex">
 
                 <select class="form-control me-2" name="stats">
                     <option value="all">All</option>
-                    <option value="0">Statistiche non visibili</option>
-                    <option value="1">Statistiche visibili</option>
+                    <option value="0">With parking</option>
+                    <input type="number" name="stars" placeholder="Stars" class="form-control me-2">
+                    
                 </select>
                 <button type="submit" class="btn btn-outline-success">Search</button>
             </form>

@@ -1,20 +1,19 @@
 <?php
-include __DIR__ . "/../Models/steam.php";
+include __DIR__ . "/../Models/hotels.php";
 
 function printRows($data)
 {
     $template = "";
     foreach ($data as $item) {
-        $template .= "<tr> <td>{$item['appid']}</td> <td>{$item['name']}</td> <td>{$item['playtime_forever']}</td> <td>{$item['has_community_visible_stats']}</td> </tr>";
-
+        $template .= "<tr class='text-center table-light'> <td>{$item['hotelId']}</td> <td>{$item['name']}</td> <td>{$item['vote']}</td> <td>{$item['distance_to_center']}</td> <td>{$item['parking']}</td> </tr>";
     }
     return $template;
 
 }
 
 //recupero dati dal model
-$data = getSteamData($db);
+$data = getHotelsData($hotels);
+$data = getHotelsByStars($hotels);
 
-//recupero singolo gioco
 
-//$gioco = getDetail($id, $db);
+//recupero singolo hotel
