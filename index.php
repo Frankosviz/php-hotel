@@ -1,40 +1,33 @@
-<?php 
-
+<?php
 // Con questa variabile andiamo a fare partire la sessione 
 session_start();
 if (!isset($_SESSION['userId'])) {
   session_destroy();
-  header("Location: login.php");
+  header('Location: login.php');
   die();
 }
+// Includiamo i nostri componenti della cartelle Controllers/Views
+include __DIR__ . "/Controllers/steam.php";
+$template = printRows($data);
 
-// Includiamo i nostri dati della cartella Models
-    include __DIR__ . "/Controllers/.php";
-    include __DIR__ ."/Models/hotels.php";
 
-    // Includiamo i nostri componenti della cartella Views
-    
-    
-
-      // if (!empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] == 0)) {
-      //   $rating = $_GET['stars'];
-      //   $hotels = array_filter($hotels, function ($hotel) use ($rating) {
-      //     return $hotel['vote'] >= $rating || $rating == "all";
-      //   });
-      // }
-
-    include __DIR__ . "/Views/header.php";
-    include __DIR__ ."/Views/main.php";
-    include __DIR__ ."/Views/footer.php";
-    
-
-    
-
+include __DIR__ . "/Views/header.php";
 ?>
+<main class="container my-4">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3><?= "Ciao " . $_SESSION['name'] ?></h3>
+    <a href="logout.php" class="btn btn-danger"> Logout</a>
+  </div>
 
-<main>
-
+  <?php
+  include __DIR__ . "/Views/table.php";
+  ?>
 </main>
+<?php
+include __DIR__ . "/Views/footer.php"
+  ?>
+
+
 
 
 

@@ -1,9 +1,11 @@
 <?php
 // Facciamo partire la sezione con session_start()
 session_start();
-
-// Verifichiamo che l'utente abbia effettuato l'accesso
-
+// Verifichiamo che l'utente abbia effettuato l'accesso e reindirizziamolo ad index.php
+if (isset($_SESSION["userId"])) {
+    header("Location: index.php");
+}
+// Includiamo i nostri dati della cartella Models
 include __DIR__ . '/../Models/user.php';
 
 // Primo caso se l'utente può accedere alla pagina
