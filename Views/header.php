@@ -13,29 +13,24 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/script.js" type="text/javascript" defer></script>
-    <title>php - Hotel</title>
+    <title>Steam</title>
 
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <h1 class="text-center text-primary mb-5">
-                Book a hotel
+        <div class="container  d-flex justify-content-between align-items-center">
+            <h1>
+                Data Steam
             </h1>
+            <form action="index.php" method="GET" class="d-flex">
 
-            <form action="index.php" method="GET" class="d-flex justify-content-between align-items-center mb-3" >
-                <div>
-                    <select class="form-control me-2" name="choices">
-                        <option value="all">All</option>
-                        <option value="0">With parking</option>
-                        <option value="1">Without parking</option>
-                        <input class="form-control" name="stars" placeholder="Search 1 - 5 stars"></option>
-                    </select>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-outline-success">Search</button>
-                </div>
+                <select class="form-control me-2" name="stats">
+                    <option value="all">All</option>
+                    <option value="0">Statistiche non visibili</option>
+                    <option value="1">Statistiche visibili</option>
+                </select>
+                <button type="submit" class="btn btn-outline-success">Search</button>
             </form>
         </div>
 
