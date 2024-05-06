@@ -24,7 +24,7 @@ $users = [
     ],
     [
         'id' => 4,
-        'name' => 'Alessandro',
+        'name' => 'Francesco',
         'surname' => 'Alessandri',
         'password' => '11111',
         'email' => 'admin@steam.com',

@@ -13,7 +13,7 @@ function printRows($data)
 
 //recupero dati dal model
 $data = getHotelsData($hotels);
-$data = getHotelsByStars($hotels);
+// $data = getHotelsByStars($hotels);
 
 
 //recupero singolo hotel

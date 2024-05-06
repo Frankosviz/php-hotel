@@ -12,9 +12,9 @@ include __DIR__ . "/Views/header.php";
     }
     ?>
     <div class="d-flex justify-content-center align-items-center">
-        <form id="loginform" action="login.php" method="POST">
-            <img class="mb-4" src="./images/mobile-logo.png" alt="logo" width="100">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <form id="loginform" action="login.php" method="POST" class="d-flex flex-column align-items-center">
+            <img class="mb-4 " src="./bookingLogo.svg" alt="logo" width="150">
+            <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating mb-4">
                 <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">

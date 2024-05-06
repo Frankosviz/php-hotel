@@ -99,26 +99,26 @@ function getHotelsData($hotels) {
 return $hotelsdata;
 }
 
-function getHotelsByStars($hotels) {
-    if (!empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] >= 1 && $_GET['stars'] <= 5)) {
-        $stars = $_GET['stars'];
-        $starsdata = $hotels;
-        $starsdata = array_filter($hotels, function ($item) use ($stars) {
-            if ($stars == 1) {
-                return $item['vote'] >= 1;
-            } else if ($stars == 2) {
-                return $item['vote'] >= 2;
-            } else if ($stars == 3) {
-                return $item['vote'] >= 3;
-            } else if ($stars == 4) {
-                return $item['vote'] >= 4;
-            } else if ($stars == 5) {
-                return $item['vote'] == 5;
-            }
-        });
-    }  
-return $starsdata;
-}
+// function getHotelsByStars($hotels) {
+//     if (!empty($_GET['stars']) || (isset($_GET['stars']) && $_GET['stars'] >= 1 && $_GET['stars'] <= 5)) {
+//         $stars = $_GET['stars'];
+//         $starsdata = $hotels;
+//         $starsdata = array_filter($hotels, function ($item) use ($stars) {
+//             if ($stars == 1) {
+//                 return $item['vote'] >= 1;
+//             } else if ($stars == 2) {
+//                 return $item['vote'] >= 2;
+//             } else if ($stars == 3) {
+//                 return $item['vote'] >= 3;
+//             } else if ($stars == 4) {
+//                 return $item['vote'] >= 4;
+//             } else if ($stars == 5) {
+//                 return $item['vote'] == 5;
+//             }
+//         });
+//     }  
+// return $starsdata;
+// }
     
 
 function getHotelsByID($hotels)

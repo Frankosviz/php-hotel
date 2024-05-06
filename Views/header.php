@@ -19,19 +19,22 @@
 
 <body>
     <header>
-        <div class="container  d-flex justify-content-between align-items-center">
-            <h1>
-                Book a Hotel
+        <div class="container  d-flex justify-content-center align-items-center">
+            <h1 class="mb-0 text-center">
+                <img src="./bookingLogo.svg" alt="logo">
             </h1>
             <form action="index.php" method="GET" class="d-flex">
 
                 <select class="form-control me-2" name="stats">
                     <option value="all">All</option>
                     <option value="0">With parking</option>
-                    <input type="number" name="stars" placeholder="Stars" class="form-control me-2">
-                    
                 </select>
+
                 <button type="submit" class="btn btn-outline-success">Search</button>
+            </form>
+            <form action="index.php" method="GET">
+                <input type="number" name="stars" placeholder="Stars" class="form-control me-2">
+
             </form>
         </div>
 
